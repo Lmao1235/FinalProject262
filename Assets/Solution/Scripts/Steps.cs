@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Steps : MonoBehaviour
 {
-    private int Countdown = 10; //จำนวนเหรียญ
+    public int Countdown;
 
     public TextMeshProUGUI counttext;
     [SerializeField] private int SceneBuild;

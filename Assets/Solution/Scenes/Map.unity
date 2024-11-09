@@ -943,6 +943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 727d15ff720be3b439bf955a75723d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Countdown: 100
   counttext: {fileID: 1768163039}
   SceneBuild: 2
 --- !u!1001 &2186379283630356991
@@ -1036,11 +1037,19 @@ PrefabInstance:
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: itemsPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 6476303242912763235, guid: 86926da40248a04478456d108c6fae6d, type: 3}
+      objectReference: {fileID: 6476303242912763235, guid: 76f2f38c664723b42aea03f157bcc7ae, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: itemsPrefab.Array.data[1]
       value: 
-      objectReference: {fileID: 6476303242912763235, guid: 76f2f38c664723b42aea03f157bcc7ae, type: 3}
+      objectReference: {fileID: 6476303242912763235, guid: 86926da40248a04478456d108c6fae6d, type: 3}
+    - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
+      propertyPath: itemsPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 9037725783300116314, guid: 8e8449d20ae847449be940760b0da47d, type: 3}
+    - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
+      propertyPath: itemsPrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 5142663867369618849, guid: 2f7eea97351be44478aed45bb245d9b9, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: wallsPrefab.Array.data[0]
       value: 
@@ -1176,7 +1185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
       propertyPath: Steps
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
       propertyPath: inventory

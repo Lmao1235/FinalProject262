@@ -8,7 +8,7 @@ namespace Solution
     public class OOPPlayer : Character
     {
         public Inventory inventory;
-        public int Steps;
+        
 
         public void Start()
         {
@@ -18,30 +18,25 @@ namespace Solution
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.W) && Steps > -1)
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 Move(Vector2.up);
-                Steps = Steps - 1 ;
+                
             }
-            if (Input.GetKeyDown(KeyCode.S) && Steps > -1)
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 Move(Vector2.down);
-                Steps = Steps - 1;
+               
             }
-            if (Input.GetKeyDown(KeyCode.A) && Steps > -1)
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 Move(Vector2.left);
-                Steps = Steps - 1;
+                
             }
-            if (Input.GetKeyDown(KeyCode.D) && Steps > -1)
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 Move(Vector2.right);
-                Steps = Steps - 1;
-            }
-
-            if (Steps == -1) 
-            {
-
+                
             }
         }
 
