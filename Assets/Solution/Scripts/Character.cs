@@ -68,6 +68,13 @@ namespace Solution
                     positionY = toY;
                     transform.position = new Vector3(positionX, positionY, 0);
                 }
+                else if (IsTable(toX, toY))
+                {
+                    mapGenerator.Table[toX, toY].Hit();
+                    positionX = toX;
+                    positionY = toY;
+                    transform.position = new Vector3(positionX, positionY, 0);
+                }
             }
             else
             {
@@ -105,6 +112,11 @@ namespace Solution
             return mapData == mapGenerator.key;
         }
         public bool IsExit(int x, int y)
+        {
+            int mapData = mapGenerator.GetMapData(x, y);
+            return mapData == mapGenerator.exit;
+        }
+        public bool IsTable(int x, int y)
         {
             int mapData = mapGenerator.GetMapData(x, y);
             return mapData == mapGenerator.exit;
