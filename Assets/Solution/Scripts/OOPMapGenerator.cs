@@ -25,6 +25,7 @@ namespace Solution
         public GameObject[] demonWallsPrefab;
         public GameObject[] itemsPrefab;
         public GameObject[] keysPrefab;
+        public GameObject[] tablePrefab;
 
         [Header("Set Transform")]
         public Transform floorParent;
@@ -35,13 +36,14 @@ namespace Solution
         public int obsatcleCount;
         public int itemPotionCount;
         public int itemKeyCount;
-        public int itemIronCount;
+        public int itemTableCount;
 
         public int[,] mapdata;
 
         public OOPWall[,] walls;
         public OOPItemPotion[,] potions;
         public OOPItemKey[,] keys;
+        public OOPTable[,] Table;
 
         // block types ...
         public int empty = 0;
@@ -50,6 +52,7 @@ namespace Solution
         public int bonuesPotion = 3;
         public int exit = 4;
         public int key = 5;
+        public int table = 6;
 
         // Start is called before the first frame update
         void Start()
@@ -121,7 +124,20 @@ namespace Solution
                 }
             }
 
-            
+            Table = new OOPTable[X, Y];
+            count = 0;
+            while (count < itemTableCount)
+            {
+                int x = Random.Range(0, X);
+                int y = Random.Range(0, Y);
+                if (mapdata[x, y] == empty)
+                {
+                    PlaceKey(x, y);
+                    count++;
+                }
+            }
+
+
 
             mapdata[X - 1, Y - 1] = exit;
             Exit.transform.position = new Vector3(X - 1, Y - 1, 0);
@@ -158,6 +174,7 @@ namespace Solution
             keys[x, y].mapGenerator = this;
             obj.name = $"Item_{keys[x, y].Name} {x}, {y}";
         }
+
 
         public void PlaceDemonWall(int x, int y)
         {

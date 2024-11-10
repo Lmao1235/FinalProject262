@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1696044835342374590}
   - component: {fileID: 7257540130226919638}
   - component: {fileID: 8782797540032361294}
+  - component: {fileID: 291548729453639997}
   m_Layer: 0
   m_Name: Iron
   m_TagString: Untagged
@@ -128,3 +129,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &291548729453639997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9037725783300116314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66016a7a304da7440a6c304a005e4d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  positionX: 0
+  positionY: 0
+  mapGenerator: {fileID: 0}
+  healPoint: 10
+  isBonues: 0
