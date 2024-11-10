@@ -28,7 +28,8 @@ namespace Solution
         public GameObject[] demonWallsPrefab;
         public GameObject[] itemsPrefab;
         public GameObject[] keysPrefab;
-        
+        public GameObject[] ironPrefab;
+
 
         [Header("Set Transform")]
         public Transform floorParent;
@@ -39,7 +40,7 @@ namespace Solution
         public int obsatcleCount;
         public int itemPotionCount;
         public int itemKeyCount;
-        public int itemTableCount;
+        public int itemIronCount;
 
         public int[,] mapdata;
 
@@ -48,6 +49,7 @@ namespace Solution
         public OOPItemKey[,] keys;
         
 
+
         // block types ...
         public int empty = 0;
         public int demonWall = 1;
@@ -55,7 +57,7 @@ namespace Solution
         public int bonuesPotion = 3;
         public int exit = 4;
         public int key = 5;
-        public int table = 6;
+        public int iron = 6;
 
         // Start is called before the first frame update
         void Start()
@@ -102,6 +104,19 @@ namespace Solution
             }
 
             potions = new OOPItemPotion[X, Y];
+            count = 0;
+            while (count < itemPotionCount)
+            {
+                int x = Random.Range(0, X);
+                int y = Random.Range(0, Y);
+                if (mapdata[x, y] == empty)
+                {
+                    PlaceItem(x, y);
+                    count++;
+                }
+            }
+
+            
             count = 0;
             while (count < itemPotionCount)
             {

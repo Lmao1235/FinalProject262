@@ -9,8 +9,7 @@ namespace Solution
 
     public class OOPItemPotion : Identity
     {
-        private int Iron = 0;
-        public TextMeshProUGUI Irontext;
+        
 
         public int healPoint = 10;
         public bool isBonues;
