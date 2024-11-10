@@ -9,9 +9,8 @@ namespace Solution
 
     public class OOPItemPotion : Identity
     {
-        private int Irons = 0; //จำนวนเหรียญ
-
-        public TextMeshProUGUI irontext;
+        private int Iron = 0;
+        public TextMeshProUGUI Irontext;
 
         public int healPoint = 10;
         public bool isBonues;
@@ -37,10 +36,13 @@ namespace Solution
                 Debug.Log("You got " + Name + " : " + healPoint);
             }
 
-            
+
 
             mapGenerator.mapdata[positionX, positionY] = 0;
             Destroy(gameObject);
+            
+            
+            
         }
     }
 }

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1696044835342374590}
   - component: {fileID: 7257540130226919638}
   - component: {fileID: 8782797540032361294}
-  - component: {fileID: 291548729453639997}
+  - component: {fileID: -3528168619033773161}
   m_Layer: 0
   m_Name: Iron
-  m_TagString: Untagged
+  m_TagString: Iron
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &291548729453639997
+--- !u!114 &-3528168619033773161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,5 +145,6 @@ MonoBehaviour:
   positionX: 0
   positionY: 0
   mapGenerator: {fileID: 0}
+  Irontext: {fileID: 0}
   healPoint: 10
   isBonues: 0
