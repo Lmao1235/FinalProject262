@@ -19,13 +19,16 @@ namespace Solution
         [Header("Set Exit")]
         public OOPExit Exit;
 
+        [Header("Set Table")]
+        public OOPTable Table;
+
         [Header("Set Prefab")]
         public GameObject[] floorsPrefab;
         public GameObject[] wallsPrefab;
         public GameObject[] demonWallsPrefab;
         public GameObject[] itemsPrefab;
         public GameObject[] keysPrefab;
-        public GameObject[] tablePrefab;
+        
 
         [Header("Set Transform")]
         public Transform floorParent;
@@ -43,7 +46,7 @@ namespace Solution
         public OOPWall[,] walls;
         public OOPItemPotion[,] potions;
         public OOPItemKey[,] keys;
-        public OOPTable[,] Table;
+        
 
         // block types ...
         public int empty = 0;
@@ -124,24 +127,12 @@ namespace Solution
                 }
             }
 
-            Table = new OOPTable[X, Y];
-            count = 0;
-            while (count < itemTableCount)
-            {
-                int x = Random.Range(0, X);
-                int y = Random.Range(0, Y);
-                if (mapdata[x, y] == empty)
-                {
-                    PlaceKey(x, y);
-                    count++;
-                }
-            }
-
-
             mapdata[X - 1, Y - 1] = exit;
             Exit.transform.position = new Vector3(X - 1, Y - 1, 0);
-        }
+            
 
+
+        }
         public int GetMapData(float x, float y)
         {
             if (x >= X || x < 0 || y >= Y || y < 0) return -1;
@@ -174,18 +165,7 @@ namespace Solution
             obj.name = $"Item_{keys[x, y].Name} {x}, {y}";
         }
 
-        public void PlaceTable(int x, int y)
-        {
-            int r = Random.Range(0, tablePrefab.Length);
-            GameObject obj = Instantiate(tablePrefab[r], new Vector3(x, y, 0), Quaternion.identity);
-            obj.transform.parent = itemPotionParent;
-            mapdata[x, y] = key;
-            Table[x, y] = obj.GetComponent<OOPTable>();
-            Table[x, y].positionX = x;
-            Table[x, y].positionY = y;
-            Table[x, y].mapGenerator = this;
-            obj.name = $"Item_{Table[x, y].Name} {x}, {y}";
-        }
+        
 
         public void PlaceDemonWall(int x, int y)
         {

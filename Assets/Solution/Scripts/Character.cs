@@ -68,13 +68,7 @@ namespace Solution
                     positionY = toY;
                     transform.position = new Vector3(positionX, positionY, 0);
                 }
-                else if (IsTable(toX, toY))
-                {
-                    mapGenerator.Table[toX, toY].Hit();
-                    positionX = toX;
-                    positionY = toY;
-                    transform.position = new Vector3(positionX, positionY, 0);
-                }
+                
             }
             else
             {

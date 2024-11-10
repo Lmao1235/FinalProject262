@@ -3,23 +3,15 @@ using System.Collections.Generic;
 using Solution;
 using UnityEngine;
 
-public class OOPTable : Identity
+namespace Solution
 {
-    public string unlockKey;
-    public GameObject YouWin;
-
-    public override void Hit()
+    public class OOPTable : Identity
     {
-        if (mapGenerator.player.inventory.numberOfItem(unlockKey) > 0)
+
+
+        public void Start()
         {
-            Debug.Log("Exit unlocked");
-            mapGenerator.player.enabled = false;
-            YouWin.SetActive(true);
-            Debug.Log("You win");
-        }
-        else
-        {
-            Debug.Log($"Exit locked, require key: {unlockKey}");
+            transform.position = new Vector3( 4, 3, 0);
         }
     }
 }
