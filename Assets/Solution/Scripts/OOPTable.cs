@@ -5,11 +5,21 @@ using UnityEngine;
 
 public class OOPTable : Identity
 {
-    public string Table;
+    public string unlockKey;
+    public GameObject YouWin;
 
     public override void Hit()
     {
-        mapGenerator.player.inventory.AddItem(Table);
-        Destroy(gameObject);
+        if (mapGenerator.player.inventory.numberOfItem(unlockKey) > 0)
+        {
+            Debug.Log("Exit unlocked");
+            mapGenerator.player.enabled = false;
+            YouWin.SetActive(true);
+            Debug.Log("You win");
+        }
+        else
+        {
+            Debug.Log($"Exit locked, require key: {unlockKey}");
+        }
     }
 }

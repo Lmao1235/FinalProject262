@@ -180,10 +180,10 @@ namespace Solution
             GameObject obj = Instantiate(tablePrefab[r], new Vector3(x, y, 0), Quaternion.identity);
             obj.transform.parent = itemPotionParent;
             mapdata[x, y] = key;
-            keys[x, y] = obj.GetComponent<OOPItemKey>();
-            keys[x, y].positionX = x;
-            keys[x, y].positionY = y;
-            keys[x, y].mapGenerator = this;
+            Table[x, y] = obj.GetComponent<OOPTable>();
+            Table[x, y].positionX = x;
+            Table[x, y].positionY = y;
+            Table[x, y].mapGenerator = this;
             obj.name = $"Item_{Table[x, y].Name} {x}, {y}";
         }
 
