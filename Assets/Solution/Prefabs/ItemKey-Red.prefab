@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2095165174655588925}
   - component: {fileID: 5485388184156554304}
-  - component: {fileID: 1907674792659833117}
+  - component: {fileID: 4966467613845657818}
   m_Layer: 0
   m_Name: ItemKey-Red
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1907674792659833117
+--- !u!114 &4966467613845657818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70143951d47da6a40a68975cf6046a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Item Key
+  Name: 
   positionX: 0
   positionY: 0
   mapGenerator: {fileID: 0}
-  key: Red Key
+  key: 
