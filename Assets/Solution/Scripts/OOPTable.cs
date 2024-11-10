@@ -12,7 +12,7 @@ using UnityEngine;
             transform.position = new Vector3( 4, 3, 0);
         }
 
-        public void OnTriggerEnter2D(Collider2D Player)
+        public void OnCollisionEnter2D(Collision2D player)
         {
             Craft.SetActive(true);
         }
