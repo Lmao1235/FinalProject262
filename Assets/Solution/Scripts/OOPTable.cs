@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using Solution;
 using UnityEngine;
 
-namespace Solution
-{
+
     public class OOPTable : Identity
     {
         public GameObject Craft;
@@ -19,4 +18,4 @@ namespace Solution
         }
         
     }
-}
+

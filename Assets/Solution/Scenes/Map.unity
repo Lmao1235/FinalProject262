@@ -326,6 +326,10 @@ PrefabInstance:
       value: CT
       objectReference: {fileID: 0}
     - target: {fileID: 7980096581119942626, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
+      propertyPath: Craft
+      value: 
+      objectReference: {fileID: 1193434597}
+    - target: {fileID: 7980096581119942626, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
       propertyPath: unlockKey
       value: Red Key
       objectReference: {fileID: 0}
@@ -731,7 +735,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193434597}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
