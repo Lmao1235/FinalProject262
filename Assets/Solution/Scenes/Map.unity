@@ -314,6 +314,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6730395046865752720, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730395046865752720, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -688,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1193434598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'STEP:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1360,21 +1364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f68d9ca032a9a5428e03e27b1c0b9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2142152730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016229881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 727d15ff720be3b439bf955a75723d68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Countdown: 100
-  counttext: {fileID: 1768163039}
-  SceneBuild: 2
 --- !u!114 &2142152733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1646,6 +1635,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
+      propertyPath: countstep
+      value: 
+      objectReference: {fileID: 1768163039}
+    - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 418901505}
@@ -1657,9 +1650,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2975489352503432100, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2142152730}
     - targetCorrespondingSourceObject: {fileID: 2975489352503432100, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2142152733}

@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEditor.PlayerSettings;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 using static UnityEngine.EventSystems.EventTrigger;
 
 namespace Solution
 {
     public class Character : Identity
     {
+        public TextMeshProUGUI countstep;
         [Header("Character")]
         public int energy;
         public int AttackPoint;
@@ -17,6 +20,10 @@ namespace Solution
         protected bool isAlive;
         protected bool isFreeze;
 
+        private void Start()
+        {
+            countstep.text = "Steps: " + energy.ToString();
+        }
         // Start is called before the first frame update
         protected void GetRemainEnergy()
         {
@@ -120,6 +127,7 @@ namespace Solution
         {
             energy -= Damage;
             Debug.Log(Name + " Current Energy : " + energy);
+            countstep.text = "Steps: " + energy.ToString();
             CheckDead();
         }
         public virtual void TakeDamage(int Damage, bool freeze)
@@ -128,7 +136,8 @@ namespace Solution
             isFreeze = freeze;
             GetComponent<SpriteRenderer>().color = Color.blue;
             Debug.Log(Name + " Current Energy : " + energy);
-            Debug.Log("you is Freeze");
+            countstep.text = "Steps: " + energy.ToString();
+            Debug.Log("you are frozen");
             CheckDead();
         }
 
@@ -145,6 +154,7 @@ namespace Solution
         {
             energy += healPoint * (Bonuse ? 2 : 1);
             Debug.Log("Current Energy : " + energy);
+            countstep.text = "Steps: " + energy.ToString();
         }
 
         protected virtual void CheckDead()
