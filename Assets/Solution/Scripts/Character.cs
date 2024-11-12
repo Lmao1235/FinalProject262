@@ -40,9 +40,11 @@ namespace Solution
             }
             int toX = (int)(positionX + direction.x);
             int toY = (int)(positionY + direction.y);
+            
 
             if (HasPlacement(toX, toY))
             {
+               
                 if (IsDemonWalls(toX, toY))
                 {
                     mapGenerator.walls[toX, toY].Hit();
@@ -64,6 +66,13 @@ namespace Solution
                 else if (IsExit(toX, toY))
                 {
                     mapGenerator.Exit.Hit();
+                    positionX = toX;
+                    positionY = toY;
+                    transform.position = new Vector3(positionX, positionY, 0);
+                }
+                else if (IsTable(toX, toY))
+                {
+                    mapGenerator.Table.Hit();
                     positionX = toX;
                     positionY = toY;
                     transform.position = new Vector3(positionX, positionY, 0);
@@ -117,10 +126,11 @@ namespace Solution
             int mapData = mapGenerator.GetMapData(x, y);
             return mapData == mapGenerator.exit;
         }
+
         public bool IsTable(int x, int y)
         {
             int mapData = mapGenerator.GetMapData(x, y);
-            return mapData == mapGenerator.exit;
+            return mapData == mapGenerator.TABLE;
         }
 
         public virtual void TakeDamage(int Damage)

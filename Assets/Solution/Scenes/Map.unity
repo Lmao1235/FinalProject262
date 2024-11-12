@@ -338,6 +338,10 @@ PrefabInstance:
       value: Red Key
       objectReference: {fileID: 0}
     - target: {fileID: 7980096581119942626, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
+      propertyPath: CanvasCraft
+      value: 
+      objectReference: {fileID: 1193434597}
+    - target: {fileID: 7980096581119942626, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
       propertyPath: mapGenerator
       value: 
       objectReference: {fileID: 760521284}
@@ -351,6 +355,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7500736791128632418, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
   m_PrefabInstance: {fileID: 173606394}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &303134964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7980096581119942626, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
+  m_PrefabInstance: {fileID: 173606394}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303134963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62afd2e5a004dc44a997666b1ef59e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &418901503
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &418901504
 Transform:
   m_ObjectHideFlags: 0
@@ -692,7 +707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1193434598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,7 +755,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193434597}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1150,8 +1165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.3743, y: 493.277}
-  m_SizeDelta: {x: 262.7487, y: 63.4462}
+  m_AnchoredPosition: {x: -525.92, y: 0}
+  m_SizeDelta: {x: 167.1516, y: 47.2433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768163039
 MonoBehaviour:
@@ -1377,6 +1392,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   irontext: {fileID: 154822194}
+--- !u!114 &2142152736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016229881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c131e4ca6bc0b184b9d442c73fad2868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2186379283630356991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1430,24 +1457,32 @@ PrefabInstance:
       value: MapController
       objectReference: {fileID: 0}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
+      propertyPath: key
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: Exit
       value: 
       objectReference: {fileID: 1670374168}
+    - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
+      propertyPath: Table
+      value: 
+      objectReference: {fileID: 303134964}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2142152727}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: itemKeyCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: itemPotionCount
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: keysPrefab.Array.size
+      propertyPath: itemPotionCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
+      propertyPath: keysPrefab.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: itemsPrefab.Array.size
@@ -1468,7 +1503,7 @@ PrefabInstance:
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: keysPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 1125293129051393862, guid: 00444c8a163332f46b6e50904ed9a7ab, type: 3}
+      objectReference: {fileID: 9037725783300116314, guid: 8e8449d20ae847449be940760b0da47d, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: keysPrefab.Array.data[1]
       value: 
@@ -1641,7 +1676,7 @@ PrefabInstance:
     - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 418901505}
+      objectReference: {fileID: 2142152736}
     - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
       propertyPath: mapGenerator
       value: 
@@ -1653,6 +1688,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2975489352503432100, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2142152733}
+    - targetCorrespondingSourceObject: {fileID: 2975489352503432100, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142152736}
   m_SourcePrefab: {fileID: 100100000, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

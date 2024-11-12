@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5235344448329704405}
   - component: {fileID: 3722711680438517126}
   - component: {fileID: 6884572362535043995}
+  - component: {fileID: -3031575928292659344}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Untagged
@@ -128,3 +129,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-3031575928292659344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7494059022717756869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70143951d47da6a40a68975cf6046a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Gold
+  positionX: 0
+  positionY: 0
+  mapGenerator: {fileID: 0}
+  key: 

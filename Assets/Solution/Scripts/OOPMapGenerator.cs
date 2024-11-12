@@ -58,6 +58,7 @@ namespace Solution
         public int exit = 4;
         public int key = 5;
         public int iron = 6;
+        public int TABLE = 7;
 
         // Start is called before the first frame update
         void Start()
@@ -144,9 +145,10 @@ namespace Solution
 
             mapdata[X - 1, Y - 1] = exit;
             Exit.transform.position = new Vector3(X - 1, Y - 1, 0);
-            
 
-
+            mapdata[4, 3] = TABLE;
+            Table.transform.position = new Vector3(4, 3, 0);
+            Debug.Log("a");
         }
         public int GetMapData(float x, float y)
         {
@@ -173,6 +175,7 @@ namespace Solution
             GameObject obj = Instantiate(keysPrefab[r], new Vector3(x, y, 0), Quaternion.identity);
             obj.transform.parent = itemPotionParent;
             mapdata[x, y] = key;
+            Debug.Log(mapdata[x, y]);
             keys[x, y] = obj.GetComponent<OOPItemKey>();
             keys[x, y].positionX = x;
             keys[x, y].positionY = y;

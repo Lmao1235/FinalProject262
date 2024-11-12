@@ -7,16 +7,16 @@ using UnityEngine;
     public class OOPTable : Identity
     {
         public GameObject Craft;
+        public GameObject CanvasCraft;
         public void Start()
         {
-            transform.position = new Vector3( 4, 3, 0);
+            //transform.position = new Vector3( 4, 3, 0);
         }
 
-        public void OnCollisionEnter2D(Collision2D Player)
+        public override void Hit()
         {
-            Craft.SetActive(true);
-        Debug.Log("LOL");
+            CanvasCraft.SetActive(true);
         }
-        
-    }
+
+}
 
