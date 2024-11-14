@@ -6,6 +6,7 @@ namespace Solution
 {
     public class Inventory : MonoBehaviour
     {
+
         // สร้าง Dictionary เพื่อเก็บข้อมูลของไอเทมในคลังของผู้เล่น
         private Dictionary<string, int> inventory = new Dictionary<string, int>();
 

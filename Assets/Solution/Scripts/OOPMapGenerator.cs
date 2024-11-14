@@ -22,6 +22,8 @@ namespace Solution
         [Header("Set Table")]
         public OOPTable Table;
 
+        
+
         [Header("Set Prefab")]
         public GameObject[] floorsPrefab;
         public GameObject[] wallsPrefab;
@@ -29,6 +31,7 @@ namespace Solution
         public GameObject[] itemsPrefab;
         public GameObject[] keysPrefab;
         public GameObject[] ironPrefab;
+        public GameObject[] hammerPrefab;
 
 
         [Header("Set Transform")]
@@ -41,6 +44,7 @@ namespace Solution
         public int itemPotionCount;
         public int itemKeyCount;
         public int itemIronCount;
+        public int itemHammerCount;
 
         public int[,] mapdata;
 
@@ -48,6 +52,8 @@ namespace Solution
         public OOPItemPotion[,] potions;
         public OOPItemKey[,] keys;
         
+
+
 
 
         // block types ...
@@ -59,6 +65,7 @@ namespace Solution
         public int key = 5;
         public int iron = 6;
         public int TABLE = 7;
+        public int hammer = 8;
 
         // Start is called before the first frame update
         void Start()
@@ -118,17 +125,6 @@ namespace Solution
             }
 
             
-            count = 0;
-            while (count < itemPotionCount)
-            {
-                int x = Random.Range(0, X);
-                int y = Random.Range(0, Y);
-                if (mapdata[x, y] == empty)
-                {
-                    PlaceItem(x, y);
-                    count++;
-                }
-            }
 
             keys = new OOPItemKey[X, Y];
             count = 0;
@@ -143,12 +139,15 @@ namespace Solution
                 }
             }
 
+
             mapdata[X - 1, Y - 1] = exit;
             Exit.transform.position = new Vector3(X - 1, Y - 1, 0);
 
             mapdata[4, 3] = TABLE;
             Table.transform.position = new Vector3(4, 3, 0);
             Debug.Log("a");
+
+            
         }
         public int GetMapData(float x, float y)
         {

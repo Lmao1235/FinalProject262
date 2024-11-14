@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 namespace Solution
@@ -13,6 +14,7 @@ namespace Solution
         public int positionY;
 
         public OOPMapGenerator mapGenerator;
+        public GoInventory hamitem;
 
         public void PrintInfo()
         {
@@ -20,6 +22,10 @@ namespace Solution
         }
 
         public virtual void Hit()
+        {
+
+        }
+        public virtual void Obtain()
         {
 
         }

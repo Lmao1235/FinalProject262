@@ -5,6 +5,7 @@ using UnityEngine;
 public class closetab : MonoBehaviour
 {
     public GameObject CloseTab;
+    
     public void closecraft()
     {
         CloseTab.SetActive(false);
