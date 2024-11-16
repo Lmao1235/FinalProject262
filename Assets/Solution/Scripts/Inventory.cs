@@ -16,10 +16,12 @@ namespace Solution
             if (inventory.ContainsKey(itemName))
             {
                 inventory[itemName] += 1;  // เพิ่มจำนวนหากไอเทมมีอยู่แล้ว
+                Debug.Log(itemName);
             }
             else
             {
                 inventory.Add(itemName, 1);  // เพิ่มไอเทมใหม่ถ้ายังไม่มี
+                Debug.Log(itemName);
             }
 
             Debug.Log($"add item {itemName} => total: {inventory[itemName]}");

@@ -14,7 +14,7 @@ namespace Solution
         public int positionY;
 
         public OOPMapGenerator mapGenerator;
-        public GoInventory hamitem;
+        
 
         public void PrintInfo()
         {
