@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using static UnityEditor.PlayerSettings;
 using static UnityEditor.Timeline.TimelinePlaybackControls;
@@ -172,6 +173,10 @@ namespace Solution
             if (energy <= 0)
             {
                 Destroy(gameObject);
+                
+                {
+                    SceneManager.LoadSceneAsync(3);
+                }
             }
         }
     }
