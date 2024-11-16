@@ -6,12 +6,23 @@ using UnityEngine;
 public class Hammer : Identity
 {
     public string key;
-    
-    
+    public string Iron;
+    public string Stick;
+
+
     public override void Obtain()
     {
-        mapGenerator.player.inventory.AddItem(key);
-        Debug.Log("lol");
+        if (mapGenerator.player.inventory.numberOfItem(Iron) > 1 && mapGenerator.player.inventory.numberOfItem(Stick) > 1)
+        {
+            mapGenerator.player.inventory.AddItem(key);
+            Debug.Log("Go Exit");
+        }
+        else
+        {
+            Debug.Log("NOT ENOUGH");
+        }
+
+        
     }
 }
 

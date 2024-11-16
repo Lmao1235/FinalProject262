@@ -174,9 +174,9 @@ namespace Solution
             {
                 Destroy(gameObject);
                 
-                {
-                    SceneManager.LoadSceneAsync(3);
-                }
+                
+                SceneManager.LoadSceneAsync(3);
+                
             }
         }
     }

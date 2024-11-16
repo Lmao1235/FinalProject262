@@ -442,6 +442,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1463666375}
     - target: {fileID: 2332669006806765522, guid: c11645dfd7698aa43a4d5f76174c57f5, type: 3}
+      propertyPath: Iron
+      value: iron
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332669006806765522, guid: c11645dfd7698aa43a4d5f76174c57f5, type: 3}
+      propertyPath: Stick
+      value: stick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332669006806765522, guid: c11645dfd7698aa43a4d5f76174c57f5, type: 3}
       propertyPath: mapGenerator
       value: 
       objectReference: {fileID: 760521284}
@@ -1062,7 +1070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1193434598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2297,7 +2305,7 @@ PrefabInstance:
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: keysPrefab.Array.data[2]
       value: 
-      objectReference: {fileID: 8617093322067102546, guid: c11645dfd7698aa43a4d5f76174c57f5, type: 3}
+      objectReference: {fileID: 7494059022717756869, guid: 19028ef0241290443a436d96135e8030, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: itemsPrefab.Array.data[0]
       value: 
@@ -2461,6 +2469,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
       propertyPath: Steps
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
+      propertyPath: energy
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5615206909734415387, guid: 4c033ef69eb269849bab9de975c465ed, type: 3}
