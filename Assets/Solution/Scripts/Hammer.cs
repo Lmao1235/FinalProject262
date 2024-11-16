@@ -16,6 +16,7 @@ public class Hammer : Identity
         {
             mapGenerator.player.inventory.AddItem(key);
             Debug.Log("Go Exit");
+            
         }
         else
         {
