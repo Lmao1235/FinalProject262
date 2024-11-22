@@ -19,22 +19,29 @@ public class CheckItem : Identity
     public GameObject Stick2V;
     public GameObject Iron1V;
     public GameObject Iron2V;
-    public override void Obtain()
+    
+    public void Update()
     {
         if (mapGenerator.player.inventory.numberOfItem(Iron) == 0)
         {
             Iron1X.SetActive(true);
             Iron2X.SetActive(true);
+            Iron1V.SetActive(false);
+            Iron2V.SetActive(false);
         }
         else if (mapGenerator.player.inventory.numberOfItem(Iron) == 1)
         {
             Iron1V.SetActive(true);
             Iron2X.SetActive(true);
+            Iron1X.SetActive(false);
+            Iron2V.SetActive(false);
         }
         else
         {
             Iron1V.SetActive(true);
             Iron2V.SetActive(true);
+            Iron1X.SetActive(false);
+            Iron2X.SetActive(false);
         }
 
         //_________________________________________________________________________________________________________________________________
@@ -43,18 +50,22 @@ public class CheckItem : Identity
         {
             Stick1X.SetActive(true);
             Stick2X.SetActive(true);
+            Stick1V.SetActive(false);
+            Stick2V.SetActive(false);
         }
         else if (mapGenerator.player.inventory.numberOfItem(Stick) == 1)
         {
             Stick1V.SetActive(true);
             Stick2X.SetActive(true);
+            Stick1X.SetActive(false);
+            Stick2V.SetActive(false);
         }
         else
         {
             Stick1V.SetActive(true);
             Stick2V.SetActive(true);
+            Stick1X.SetActive(false);
+            Stick2X.SetActive(false);
         }
-
-
     }
 }
