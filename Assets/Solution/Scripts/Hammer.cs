@@ -15,6 +15,7 @@ public class Hammer : Identity
         if (mapGenerator.player.inventory.numberOfItem(Iron) > 1 && mapGenerator.player.inventory.numberOfItem(Stick) > 1)
         {
             mapGenerator.player.inventory.AddItem(key);
+            
             Debug.Log("Go Exit");
             
         }
