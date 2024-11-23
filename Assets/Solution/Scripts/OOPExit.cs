@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace Solution
@@ -19,10 +20,7 @@ namespace Solution
         {
             if (mapGenerator.player.inventory.numberOfItem(unlockKey) > 0)
             {
-                Debug.Log("Exit unlocked");
-                mapGenerator.player.enabled = false;
-                YouWin.SetActive(true);
-                Debug.Log("You win");
+                SceneManager.LoadSceneAsync(2);
             }
             else
             {
