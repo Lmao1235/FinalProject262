@@ -368,10 +368,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7500736791128632418, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 303134968}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e629ce4bd37fe8429f8e16460c20c31, type: 3}
 --- !u!1001 &260544073
 PrefabInstance:
@@ -598,32 +595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62afd2e5a004dc44a997666b1ef59e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &303134968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303134963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd1cc1b888445441b0afa4249b104c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  positionX: 0
-  positionY: 0
-  mapGenerator: {fileID: 760521284}
-  Iron: iron
-  Stick: stick
-  Stick1X: {fileID: 1276527156}
-  Stick2X: {fileID: 310973004}
-  Iron1X: {fileID: 1449877286}
-  Iron2X: {fileID: 1224317771}
-  Stick1V: {fileID: 483939114}
-  Stick2V: {fileID: 111694278}
-  Iron1V: {fileID: 272746915}
-  Iron2V: {fileID: 1275272900}
 --- !u!1 &310973004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1379,7 @@ GameObject:
   - component: {fileID: 1193434600}
   - component: {fileID: 1193434599}
   - component: {fileID: 1193434598}
-  - component: {fileID: 1193434602}
+  - component: {fileID: 1193434603}
   m_Layer: 5
   m_Name: Crafting
   m_TagString: Untagged
@@ -1519,7 +1490,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1193434602
+--- !u!114 &1193434603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1528,10 +1499,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1193434597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da2caaf67a70e444ba94bbb6264695c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cd1cc1b888445441b0afa4249b104c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  irontext: {fileID: 0}
+  Name: 
+  positionX: 0
+  positionY: 0
+  mapGenerator: {fileID: 760521284}
+  Iron: iron
+  Stick: stick
+  Stick1X: {fileID: 1276527156}
+  Stick2X: {fileID: 310973004}
+  Iron1X: {fileID: 1449877286}
+  Iron2X: {fileID: 1224317771}
+  Stick1V: {fileID: 483939114}
+  Stick2V: {fileID: 111694278}
+  Iron1V: {fileID: 272746915}
+  Iron2V: {fileID: 1275272900}
 --- !u!1 &1206320024
 GameObject:
   m_ObjectHideFlags: 0
