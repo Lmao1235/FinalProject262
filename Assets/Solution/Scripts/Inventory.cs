@@ -39,7 +39,7 @@ namespace Solution
         {
             if (inventory.ContainsKey(itemName))
             {
-                int remaining = inventory[itemName] - 1;
+                int remaining = inventory[itemName] - 2;
                 if (remaining <= 0)
                 {
                     inventory.Remove(itemName);  // ถ้าจำนวนเป็น 0 หรือ น้อยกว่า ให้ลบออกจากคลัง

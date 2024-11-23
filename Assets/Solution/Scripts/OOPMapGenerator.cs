@@ -30,7 +30,8 @@ namespace Solution
         public GameObject[] demonWallsPrefab;
         public GameObject[] itemsPrefab;
         public GameObject[] keysPrefab;
-        public GameObject[] ironPrefab;
+        public GameObject[] keys2Prefab;
+        
         public GameObject[] hammerPrefab;
 
 
@@ -43,7 +44,7 @@ namespace Solution
         public int obsatcleCount;
         public int itemPotionCount;
         public int itemKeyCount;
-        public int itemIronCount;
+        public int itemKey2Count;
         public int itemHammerCount;
 
         public int[,] mapdata;
@@ -51,7 +52,8 @@ namespace Solution
         public OOPWall[,] walls;
         public OOPItemPotion[,] potions;
         public OOPItemKey[,] keys;
-        
+        public OOPitemkey2[,] key2;
+
 
 
 
@@ -63,7 +65,7 @@ namespace Solution
         public int bonuesPotion = 3;
         public int exit = 4;
         public int key = 5;
-        public int iron = 6;
+        public int Key2 = 6;
         public int TABLE = 7;
         public int hammer = 8;
 
@@ -139,6 +141,19 @@ namespace Solution
                 }
             }
 
+            key2 = new OOPitemkey2[X, Y];
+            count = 0;
+            while (count < itemKey2Count)
+            {
+                int x = Random.Range(0, X);
+                int y = Random.Range(0, Y);
+                if (mapdata[x, y] == empty)
+                {
+                    PlaceKey2(x, y);
+                    count++;
+                }
+            }
+
 
             mapdata[X - 1, Y - 1] = exit;
             Exit.transform.position = new Vector3(X - 1, Y - 1, 0);
@@ -181,8 +196,21 @@ namespace Solution
             keys[x, y].mapGenerator = this;
             obj.name = $"Item_{keys[x, y].Name} {x}, {y}";
         }
+        public void PlaceKey2(int x, int y)
+        {
+            int r = Random.Range(0, keys2Prefab.Length);
+            GameObject obj = Instantiate(keys2Prefab[r], new Vector3(x, y, 0), Quaternion.identity);
+            obj.transform.parent = itemPotionParent;
+            mapdata[x, y] = Key2;
+            Debug.Log(mapdata[x, y]);
+            key2[x, y] = obj.GetComponent<OOPitemkey2>();
+            key2[x, y].positionX = x;
+            key2[x, y].positionY = y;
+            key2[x, y].mapGenerator = this;
+            obj.name = $"Item_{key2[x, y].Name} {x}, {y}";
+        }
 
-        
+
 
         public void PlaceDemonWall(int x, int y)
         {

@@ -36,7 +36,7 @@ public class CheckItem : Identity
             Iron1X.SetActive(false);
             Iron2V.SetActive(false);
         }
-        else
+        else if (mapGenerator.player.inventory.numberOfItem(Iron) > 1)
         {
             Iron1V.SetActive(true);
             Iron2V.SetActive(true);
@@ -60,7 +60,7 @@ public class CheckItem : Identity
             Stick1X.SetActive(false);
             Stick2V.SetActive(false);
         }
-        else
+        else if (mapGenerator.player.inventory.numberOfItem(Stick) > 1)
         {
             Stick1V.SetActive(true);
             Stick2V.SetActive(true);

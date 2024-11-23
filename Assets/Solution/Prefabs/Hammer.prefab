@@ -203,3 +203,5 @@ MonoBehaviour:
   positionY: 0
   mapGenerator: {fileID: 0}
   key: Hammer
+  Iron: iron
+  Stick: stick

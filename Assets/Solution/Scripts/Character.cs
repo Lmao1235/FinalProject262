@@ -85,7 +85,14 @@ namespace Solution
                     positionY = toY;
                     transform.position = new Vector3(positionX, positionY, 0);
                 }
-                
+                else if (IsKey2(toX, toY))
+                {
+                    mapGenerator.key2[toX, toY].Hit();
+                    positionX = toX;
+                    positionY = toY;
+                    transform.position = new Vector3(positionX, positionY, 0);
+                }
+
             }
             else
             {
@@ -121,6 +128,11 @@ namespace Solution
         {
             int mapData = mapGenerator.GetMapData(x, y);
             return mapData == mapGenerator.key;
+        }
+        public bool IsKey2(int x, int y)
+        {
+            int mapData = mapGenerator.GetMapData(x, y);
+            return mapData == mapGenerator.Key2;
         }
         public bool IsExit(int x, int y)
         {

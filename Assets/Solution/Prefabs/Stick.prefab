@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3676206817913531539}
   - component: {fileID: 5148822150242903445}
-  - component: {fileID: 922240400830860424}
+  - component: {fileID: -6012005588158215450}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.2123, y: -0.1805, z: 0}
-  m_LocalScale: {x: 0.7346, y: 0.7744, z: 1}
+  m_LocalScale: {x: 0.5203319, y: 0.548523, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &922240400830860424
+--- !u!114 &-6012005588158215450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5215778279226375408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70143951d47da6a40a68975cf6046a44, type: 3}
+  m_Script: {fileID: 11500000, guid: a44bf22b121a46f48bcb6751336f40fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Stick
