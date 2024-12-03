@@ -6,7 +6,7 @@ using UnityEngine.Assertions.Must;
 namespace Solution
 {
 
-    public class OOPMapGenerator : MonoBehaviour
+    public class OOPMapGenerator : MonoBehaviour, IDataPersistence
     {
         [Header("Set MapGenerator")]
         public int X;
@@ -223,6 +223,16 @@ namespace Solution
             walls[x, y].positionY = y;
             walls[x, y].mapGenerator = this;
             obj.name = $"DemonWall_{walls[x, y].Name} {x}, {y}";
+        }
+
+        public void LoadData(GameData data)
+        {
+            this.transform.position = data.playerPosition;
+        }
+
+        public void SaveData(GameData data)
+        {
+            data.playerPosition = this.transform.position;
         }
     }
 }

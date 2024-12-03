@@ -40,6 +40,8 @@ namespace Solution
             }
         }
 
+        
+
         public void Attack(OOPEnemy _enemy)
         {
             _enemy.energy -= AttackPoint;
